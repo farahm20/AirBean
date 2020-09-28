@@ -1,0 +1,13 @@
+body {
+    background: #F3E4E1;
+
+    main {
+        padding: 6rem 1.4rem;
+        box-sizing: border-box;
+        background-image: url('./assets/graphics/header-top.svg'), url('./assets/graphics/header-bottom.svg');
+        background-position: top center, bottom center;
+        background-repeat: no-repeat, no-repeat;
+        background-size: 100%, 100%;
+    }
+
+}
