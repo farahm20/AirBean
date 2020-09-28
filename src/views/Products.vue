@@ -1,18 +1,18 @@
 <template>
     <main id="menuProducts">
         <h1>The Products Page</h1>
-            <Product
+            <MenuItem
             v-for="item in product"
             :key="item.id"
             :product ="item"/>
     </main>
 </template>
 <script>
-import Product from '@/components/Product';
+import MenuItem from '@/components/MenuItem';
 export default {
     name: 'Products',
     components: {
-      Product
+      MenuItem
     },
     computed: {
       product(){
