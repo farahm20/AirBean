@@ -1,5 +1,5 @@
 <template>
-  <main id="landing" v-on:click="$router.push('/products')">
+  <main id="landing" v-on:click="$router.push('/menu')">
     <img src="./../assets/graphics/landing-logo.svg" alt="landing" />
   </main>
 </template>
@@ -13,7 +13,7 @@ export default {
 <style lang = "scss">
 @import './../scss/variables';
 body {
-  background-color: #38846d;
+  background-color: $backgroundGreen;
 }
 #landing {
   height: 100vh;

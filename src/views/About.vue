@@ -1,5 +1,6 @@
 <template>
   <main id="about">
+    <Navicon :type="'navicon'" />
     <h1>Vårt Kaffe</h1>
     <p class="bold">
       <br />Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
@@ -36,36 +37,38 @@
 </template>
 
 <script>
+import Navicon from "@/components/Navicon";
 export default {
   name: "About",
+  components: {
+    Navicon,
+  },
 };
 </script>
 
 <style lang = "scss">
-//partials
-@import './../scss/variables';
-body{
-  background: #F3E4E1;
+@import "./../scss/variables";
+body {
+  background: #f3e4e1;
   #about {
     /*aligning footer in th middle*/
-       
 
     footer {
       flex-direction: column;
-     @include flex-center;
-       img {
-                border-radius: 999rem;
-            }
+      @include flex-center;
+      img {
+        border-radius: 999rem;
+      }
     }
- 
+
     h3 {
-         @include reset-mp;
-         font-size: 1.4rem;
-   }
- 
+      @include reset-mp;
+      font-size: 1.4rem;
+    }
+
     .role {
       @include reset-mp;
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
   }
 }
