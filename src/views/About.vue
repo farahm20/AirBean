@@ -3,11 +3,11 @@
     <Navicon :type="'navicon'" />
     <h1>Vårt Kaffe</h1>
     <p class="bold">
-      <br />Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
+      <b />Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
       grounds dripper, crema, strong whipped, variety extra iced id lungo half
       and half mazagran. Pumpkin spice.
 
-      <br />
+      <b />
     </p>
     <p>
       Que dark fair trade, spoon decaffeinated, barista wings whipped, as rich
@@ -51,8 +51,14 @@ export default {
 body {
   background: #f3e4e1;
   #about {
-    /*aligning footer in th middle*/
+    .bold {
+      -webkit-text-stroke: medium;
+    }
 
+    p {
+       text-align: justify;
+    }
+    /*aligning footer in th middle*/
     footer {
       flex-direction: column;
       @include flex-center;
@@ -60,12 +66,10 @@ body {
         border-radius: 999rem;
       }
     }
-
     h3 {
       @include reset-mp;
       font-size: 1.4rem;
     }
-
     .role {
       @include reset-mp;
       font-size: 0.8rem;

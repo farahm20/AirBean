@@ -71,6 +71,7 @@ export default {
   top: 4rem;
   right: 2rem;
   width: calc(100vw - 4rem);
+  
   .dots {
     color: red;
     border-bottom: 2px dotted rgba(0, 0, 0, 0.4);

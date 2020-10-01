@@ -35,13 +35,9 @@ export default {
 <style lang = "scss">
 @import "./../scss/variables";
 body {
-  background-color: $backgroundPink;
-
-  .icons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: -62px;
+  #menu{
+    background-color: $backgroundPink;
   }
+
 }
 </style>

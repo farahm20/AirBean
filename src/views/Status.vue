@@ -2,7 +2,7 @@
   <main class="status">
     <section class="text">
       <p></p>
-      <b>{{ confirmation.orderNr }}</b>
+      <b>Ordernummer: {{ confirmation.orderNr }}</b>
       <p></p>
       <img src="./../assets/graphics/droneCup.svg" alt="droneCup" />
       <section class="confirmation">
@@ -29,7 +29,6 @@ export default {
 @import "./../scss/variables";
 body {
   background: $Orange;
-
   .text {
     display: flex;
     flex-direction: column;

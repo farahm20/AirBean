@@ -12,7 +12,12 @@ export default new Vuex.Store({
     products: Array,
     cart: [],
     confirmed: Object,
-    showNav: false
+    showNav: false,
+    profile: {
+      name: 'Sixten Kaffelöver',
+      email: 'sixten.kaffelover@zocom.se',
+      orderHistory: []
+    }
   },
   mutations: {
     closeNav(state) {
@@ -91,7 +96,7 @@ export default new Vuex.Store({
       })
       console.log("send order" + data)
       ctx.commit('orderConfirmed', data)
-      ctx.commit('emptyCart')
+    //  ctx.commit('emptyCart')
       router.push('/status')
     },
     addToCart(ctx, product) {
