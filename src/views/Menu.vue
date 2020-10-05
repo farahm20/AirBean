@@ -1,7 +1,7 @@
 <template>
   <main id="menu">
     <section class="icons">
-      <Navicon />
+    <Navicon :type="'navicon'" />
       <CartIcon />
     </section>
     <h1 class="heading">Menu</h1>

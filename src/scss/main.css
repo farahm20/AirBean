@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Serif:700|Work+Sans:400,600&display=swap");
+h1 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 40px;
+}
+
+h1, h2, h3, p {
+  font: PT Serif;
+}
+
+body {
+  background: #F3E4E1;
+}
+
+body .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -62px;
+}
+
+body .navicon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 15px;
+  color: black;
+  background-color: white;
+  width: 3.3rem;
+  height: 3.3rem;
+  border-radius: 999rem;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'PT Serif', serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  height: 4rem;
+  margin: 1rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #eee;
+  border-radius: 999rem;
+  background: #2F2926;
+}
+
+:root {
+}
+
+main {
+  padding: 6rem 1.4rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-image: url("./assets/graphics/header-top.svg"), url("./assets/graphics/header-bottom.svg");
+  background-position: top center, bottom center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
+}
+/*# sourceMappingURL=main.css.map */

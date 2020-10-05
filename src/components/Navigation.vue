@@ -1,5 +1,7 @@
 <template>
   <section class="navMain">
+  <div class="closeNav" @click="toggleMenu"></div> 
+  <Navicon :type="'close'" v-if="showMenu"/>
     <section class="closeIcon">
       <img
         src="./../assets/graphics/close.svg"
@@ -17,22 +19,20 @@
       <p class="addSpace"></p>
       <a href="#" @click="goTo('/status')">Orderstatus</a>
     </nav>
-    <Menu v-if="showMenu"/>
   </section>
 </template>
 
 <script>
-import Menu from "./../views/Menu";
-
+import Navicon from './Navicon';
 export default {
   name: "Navigation",
   components: {
-      Menu,
+      Navicon,
   },
-  data() {
-      return {
-          showMenu: false,
-      };
+  computed: {
+    showMenu() {
+      return this.$store.state.showNav;
+    }
   },
   methods: {
     menu() {
@@ -65,34 +65,19 @@ export default {
   display: flex;
   flex-direction: column;
 
-  .closeIcon {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    left: 40px;
-    background-color: white;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 999rem;
+
+  .navicon {
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 0;
   }
 
-  .closeBtn {
-    color: black;
-    background-color: white;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 999rem;
-    position: absolute;
-    left: 5px;
-    top: 5px;
-  }
 
   #navigation {
       margin-top: 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     a {
       font-family: PT Serif;
       font-style: normal;
@@ -101,7 +86,6 @@ export default {
       text-decoration: none;
       margin: 1rem;
     }
-
     p {
       height: 1px;
       width: 48px;

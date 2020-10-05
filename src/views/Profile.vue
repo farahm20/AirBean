@@ -8,10 +8,10 @@
       <p class="email">{{ profile.email }}</p>
       <section class="orderHistory">
         <h1>Orderhistorik</h1>
-        <article class="numAndDate">
-          <p class="bold">{{ confirmation.orderNr }}</p>
-          <p class="dots"> </p>
-          <p>{{ this.dateStamp }}</p>
+        <article class="order">
+          <p class="order-num">{{ confirmation.orderNr }}</p>
+          <p class="order-dots"> </p>
+          <p class="order-date">{{ this.dateStamp }}</p>
         </article>
       </section>
     </section>
@@ -82,23 +82,25 @@ body {
     text-align: justify;
     align-self: end;
 
-    .numAndDate {
-      display: flex;
-    }
-    h1 {
-      font-size: 22px;
-    }
-    p {
-      margin: 0;
-      font-size: 14px;
-    }
-    .bold {
-      -webkit-text-stroke: thick;
-     margin-right: 130px;
-    }
-    .dots {
-      flex: 1;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      .order {
+        display: flex;
+    
+      p {
+        font-size: 14px;
+
+        &.order-num {
+          -webkit-text-stroke: thick;
+          font-weight: 400;
+        }
+        &.order-dots {
+          flex: 1;
+          border-bottom: 1px dotted rgb(247, 241, 241);
+        }
+
+        &.order-date {
+          font-size: 14px;
+        }
+      }
     }
   }
 }

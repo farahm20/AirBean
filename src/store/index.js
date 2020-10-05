@@ -12,7 +12,10 @@ export default new Vuex.Store({
     products: Array,
     cart: [],
     confirmed: Object,
+
     showNav: false,
+    showMenu: false,
+    
     profile: {
       name: 'Sixten Kaffelöver',
       email: 'sixten.kaffelover@zocom.se',
@@ -20,10 +23,8 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    closeNav(state) {
-      state.showNav = !state.showNav;
-    },
     toggleMenu(state) {
+      console.log("work")
       state.showNav = !state.showNav;
     },
     //saving items in state
@@ -74,6 +75,7 @@ export default new Vuex.Store({
 
   },
   actions: {
+
     /*Fetch data from api, save data(array of objects) in response, transform response in json
     commits data to updateProducts*/
     async fetchProducts(ctx) {

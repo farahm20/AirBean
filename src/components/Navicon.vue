@@ -1,30 +1,23 @@
 <template>
-    <nav class="navicon">
-        <img src="./../assets/graphics/navicon.svg" 
-        alt="navicon"
-        @click="showNav = !showNav"
-        />
-        <Navigation v-if="showNav"/>
+    <nav class="navicon" @click="close">
+      <img v-if="type === 'navicon'" src="./../assets/graphics/navicon.svg" alt="navicon">
+      <img v-if="type === 'close'" src="./../assets/graphics/close.svg" alt="close">
     </nav>   
 </template>
 
 <script>
-import Navigation from "./Navigation";
-
 export default {
     name: 'Navicon',
-    components: {
-        Navigation,
-    },
-    data() {
-        return {
-            showNav: false,
-        };
+    props: {
+      type: String
     },
     methods: {
-        navigation() {
-            return this.$store.state.navigation;
-        },
+      close(){
+        this.$store.commit('toggleMenu');
+      },
+      navigation() {
+          return this.$store.state.navigation;
+      },
         
     }
 }
@@ -37,11 +30,9 @@ export default {
         justify-content: center;
         margin-bottom: 15px;
         color: black;
-        background-color: white;
+       
         width: 3.3rem;
         height: 3.3rem;
         border-radius: 999rem;
     }
-
-
 </style>
