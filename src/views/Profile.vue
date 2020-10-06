@@ -1,6 +1,6 @@
 <template>
   <main id="profile">
-    <Navicon />
+    <Navicon :type="'navicon'" />
     <ProfileForm v-if="!profile.name.length" />
     <section class="customer">
       <img src="./../assets/graphics/Profile.svg" alt="" />

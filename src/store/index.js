@@ -98,7 +98,7 @@ export default new Vuex.Store({
       })
       console.log("send order" + data)
       ctx.commit('orderConfirmed', data)
-    //  ctx.commit('emptyCart')
+      ctx.commit('emptyCart')
       router.push('/status')
     },
     addToCart(ctx, product) {

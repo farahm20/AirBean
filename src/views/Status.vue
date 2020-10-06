@@ -15,6 +15,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Status",
   computed: {
@@ -51,8 +52,8 @@ body {
     font-size: 20px;
     font-weight: 500;
   }
-
-  img{
+/*
+  .drone{
     animation: fly 4s linear infinite;
   }
 
@@ -62,5 +63,7 @@ body {
     50% { transform: translateY(1rem) rotateZ(0deg); }
     100% { transform: translateY(0) rotateZ(0deg); }
   }
+  */
 }
+
 </style>
